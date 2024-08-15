@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GitHub Blog</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-    <button onclick="myFunction()">클릭</button>
-  
+    <h1>Welcome to My GitHub Blog</h1>
+    <div id="markdown-content"></div>
+
     <script>
-      // JavaScript 코드 작성
-      function myFunction() {
-        console.log("버튼이 클릭되었습니다!");
-      }
+        // Fetch the Markdown file
+        fetch('README.md')
+            .then(response => response.text())
+            .then(text => {
+                // Convert Markdown to HTML and insert it into the page
+                document.getElementById('markdown-content').innerHTML = marked(text);
+            })
+            .catch(error => console.error('Error fetching the Markdown file:', error));
     </script>
-  </body>
+</body>
 </html>
