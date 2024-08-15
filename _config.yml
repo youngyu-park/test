@@ -1,0 +1,6 @@
+title: My GitHub Blog
+description: A simple blog powered by Jekyll and hosted on GitHub Pages.
+baseurl: "" # Leave this blank for GitHub Pages
+url: "https://your-username.github.io" # Replace with your GitHub Pages URL
+
+theme: jekyll-theme-minimal # You can choose any Jekyll theme
