@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{ site.title }}</title>
+  <title>Markdown to HTML</title>
+  <script src="https://cdn.jsdelivr.net/npm/remarkable@2/dist/remarkable.min.js"></script>
 </head>
 <body>
-    <script>
-        document.getElementById("introduction").innerHTML = './_content/introduction.md';
-        document.getElementById("article").innerHTML = /_content/article.md;
-        document.getElementById("presentation").innerHTML = /_content/presentation.md;
-    </script>
+  <div id="content"></div>
 
-    <h1>Hello, world!</h1>
-    <h2>About me</h2>
-    <div class = "main">
-    <p class = "introduction"></p>
+  <script src="https://cdn.jsdelivr.net/npm/remarkable@2/dist/remarkable.min.js"></script>
 
-    <h2>Articles and presentations</h2>
-    <h3>Articles</h3>
-    <p class = "article"></p>
-    <h3>Presentations</h3>
-    <p class = "presentation"></p>
+<script>
+  // Remarkable 인스턴스 생성
+  var md = new Remarkable();
 
-  </div>
+  // XMLHttpRequest를 사용하여 MD 파일 읽기 (동기 방식)
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'your_markdown_file.md', false);
+  xhr.send();
+
+  // 읽어온 MD 내용을 HTML로 변환
+  var html = md.render(xhr.responseText);
+
+  // HTML 요소에 변환된 내용 삽입
+  document.getElementById('content').innerHTML = html;
+</script>
 </body>
 </html>
