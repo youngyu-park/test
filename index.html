@@ -1,28 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Markdown to HTML</title>
-  <script src="https://cdn.jsdelivr.net/npm/remarkable@2/dist/remarkable.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel = "stylesheet" href = "./stylesheet/main.css">
 </head>
 <body>
-  <div id="content"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/remarkable@2/dist/remarkable.min.js"></script>
-
-<script>
-  // Remarkable 인스턴스 생성
-  var md = new Remarkable();
-
-  // XMLHttpRequest를 사용하여 MD 파일 읽기 (동기 방식)
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'your_markdown_file.md', false);
-  xhr.send();
-
-  // 읽어온 MD 내용을 HTML로 변환
-  var html = md.render(xhr.responseText);
-
-  // HTML 요소에 변환된 내용 삽입
-  document.getElementById('content').innerHTML = html;
-</script>
+  
+  <div class = "alert_box" id = "alert_box">Alert Box</div>
+  <button onclick = "document.getElementById('alert_box').style.display = 'block'; :">Button
+    <button onclick = "document.getElementById('alert_box').style.display = 'none'; :">X</button>
+  </button><br>
+  working?
 </body>
 </html>
