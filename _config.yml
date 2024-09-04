@@ -22,7 +22,7 @@ title: 제목
 email: 이메일
 description: >- # this means to ignore newlines until "baseurl:"
   소개
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "youngyu-park.github.io/test/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 트위터이름
 github_username:  깃헙이름
